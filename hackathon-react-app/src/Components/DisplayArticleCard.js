@@ -5,7 +5,9 @@ function DisplayArticleCard(props) {
   console.log(props)
     return (
       <div className="DisplayArticleCard">
-        <p>{props.blank.title}</p>
+        <p>{props.blank.created_at}</p>
+        <p>{props.blank.author}</p>
+        <p>{props.blank.points}</p>
       </div>
     );
   }
