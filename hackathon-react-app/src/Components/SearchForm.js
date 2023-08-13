@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const SearchForm = ({ onFilter }) => {
 //onFilter needs to be a function defined in App component
