@@ -5,9 +5,15 @@ function DisplayArticleCard(props) {
   console.log(props)
     return (
       <div className="DisplayArticleCard">
-        <p>{props.blank.created_at}</p>
-        <p>{props.blank.author}</p>
-        <p>{props.blank.points}</p>
+        <span style = {{display: "flex", gap: "15px", justifyContent: "left", backgroundColor: "beige"}}>
+        <a href = {`${props.blank.url}`} target = "_blank"><p>{props.blank.title}</p></a>
+        </span>
+        <span style = {{display: "flex", gap: "15px", justifyContent: "left", backgroundColor: "beige"}}>
+        <p> created on: {props.blank.created_at}</p>
+        </span>
+        <span style = {{display: "flex", gap: "15px", justifyContent: "left", backgroundColor: "beige"}}>
+        user: {props.blank.author} || {props.blank.points} points
+        </span>
       </div>
     );
   }
