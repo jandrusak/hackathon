@@ -28,8 +28,8 @@ const handleFilter = (query) => {
 
   return (
     <div className="App">
-      <ListArticles articles={filteredArticles} />
       <SearchForm onFilter={handleFilter} />
+      <ListArticles articles={filteredArticles} />
 
     </div>
   );

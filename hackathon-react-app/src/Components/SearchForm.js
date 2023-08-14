@@ -2,33 +2,25 @@ import React, { useState } from 'react';
 
 const SearchForm = ({ onFilter }) => {
 //onFilter needs to be a function defined in App component
-    const [searchData, setSearchData] = useState({
-        tag: '', 
-        date: '', 
-        author: '',
-        title: '', 
-    });
+    const [searchData, setSearchData] = useState("");
 
     const handleInputChange = (e) => {
-        const {name, value} = e.target;
-        setSearchData((prevData) => ({
-            ...prevData, 
-            [name]: value, 
-        }));
-    };
+        setSearchData(e.target.value)
+        }
 
     const handleSearch = () => {
         onFilter(searchData)
     };
-
+    console.log(searchData)
     return (
         <div>
-            <input>
+            <input
                 type="text"
                 name="tag"
                 placeholder="tag..."
-                value={searchData.tag}
+                value={searchData}
                 onChange={handleInputChange}
+                >
             </input>
             <button onClick={handleSearch}>Search</button>
         </div>
